@@ -1,0 +1,7 @@
+import { Box } from "rebass";
+import styled from "styled-components";
+
+export const Divider = styled(Box)`
+  height: 1px;
+  background-color: ${({ theme }) => theme.divider};
+`;

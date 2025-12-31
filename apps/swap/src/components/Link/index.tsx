@@ -1,0 +1,56 @@
+import React from "react";
+import { Link as RebassLink } from "rebass";
+import { Link as RouterLink } from "react-router-dom";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { lighten, darken } from "polished";
+
+const WrappedLink = ({
+  external,
+  children,
+  ...rest
+}: {
+  external: boolean;
+  children: React.ReactNode;
+}) => (
+  <RebassLink
+    target={external ? "_blank" : undefined}
+    rel={external ? "noopener noreferrer" : undefined}
+    color="#2f80ed"
+    {...rest}
+  >
+    {children}
+  </RebassLink>
+);
+
+WrappedLink.propTypes = {
+  external: PropTypes.bool,
+};
+
+export const Link = styled(WrappedLink)<{ color?: string }>`
+  color: ${({ color }) => color || "#2f80ed"};
+`;
+
+export const CustomLink = styled(RouterLink)`
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  &:visited {
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    underline: none;
+  }
+`;
+
+export const BasicLink = styled(RouterLink)`
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    underline: none;
+  }
+`;

@@ -1,0 +1,65 @@
+{
+  "name": "home",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode development",
+    "dev:production": "NODE_ENV=production vite --mode production",
+    "dev:mock": "cross-env MOCK=true vite --mode development",
+    "build": "pnpm run build:production",
+    "build:production": "NODE_ENV=production vite build --mode production",
+    "build:preview": "NODE_ENV=production vite build --mode preview",
+    "build:testing": "NODE_ENV=production vite build --mode testing",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prettier": "prettier --allow-empty --log-level warn --write '**/*.{ts,tsx,js,jsx,json,md}'",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@repo/consts": "workspace:*",
+    "@repo/ui": "workspace:*",
+    "@ant-design/cssinjs": "^1.22.1",
+    "@sentry/react": "^8.28.0",
+    "ahooks": "^3.7.11",
+    "antd": "^5.16.5",
+    "antd-style": "^3.6.2",
+    "classnames": "^2.5.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.23.0",
+    "reset.css": "^2.0.2",
+    "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@repo/typescript-config": "workspace:*",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
+    "organize-imports-cli": "^0.10.0",
+    "prettier": "^3.2.5",
+    "rollup-plugin-polyfill-node": "^0.13.0",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "turbo": "^2.3.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.4.1",
+    "vite-plugin-mock-dev-server": "^1.6.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run prettier",
+      "organize-imports-cli"
+    ]
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
+}

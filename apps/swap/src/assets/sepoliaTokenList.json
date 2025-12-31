@@ -1,0 +1,36 @@
+{
+  "name": "Local",
+  "keywords": ["local", "defi"],
+  "timestamp": "2024-11-07T09:37:00.000+00:00",
+  "tokens": [
+    {
+      "chainId": 11155111,
+      "address": "0xeF970B95D4b6191E603AC8Bb9Bb3ce2A6EF8801a",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 18,
+      "logoURI": "https://coda-static.oss-cn-shanghai.aliyuncs.com/swap/tokenIcons/exUSD.png"
+    },
+    {
+      "chainId": 11155111,
+      "address": "0x668E8a7acd69496B8E48e8918Ab42bf3f134ee74",
+      "name": "TOKEN",
+      "symbol": "TOKEN",
+      "decimals": 18,
+      "logoURI": "https://coda-static.oss-cn-shanghai.aliyuncs.com/swap/tokenIcons/exPNUT.png"
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xf6B92eE0935C8F8e9A78E6bFA40bC4E703600e1A",
+      "name": "ZK",
+      "symbol": "ZK",
+      "decimals": 18,
+      "logoURI": "https://coda-static.oss-cn-shanghai.aliyuncs.com/swap/tokenIcons/tZKJ.png"
+    }
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 2
+  }
+}

@@ -1,0 +1,47 @@
+import React, { useCallback, useState } from "react";
+import { HelpCircle as Question } from "react-feather";
+import styled from "styled-components";
+import Tooltip from "../Tooltip";
+import { transparentize } from "polished";
+
+const QuestionWrapper = styled.div<{ isWhite: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: default;
+  border-radius: 36px;
+  color: ${({ theme, isWhite }) =>
+    isWhite ? transparentize(0.5, theme.white) : transparentize(0.5, theme.black)};
+
+  :hover,
+  :focus {
+    opacity: 0.7;
+  }
+`;
+
+export default function QuestionHelper({
+  text,
+  isWhite = true,
+}: {
+  text: string;
+  isWhite?: boolean;
+}) {
+  const [show, setShow] = useState<boolean>(false);
+
+  const open = useCallback(() => setShow(true), [setShow]);
+  const close = useCallback(() => setShow(false), [setShow]);
+
+  return (
+    <span style={{ marginLeft: 4 }}>
+      <Tooltip text={text} show={show}>
+        <QuestionWrapper isWhite={isWhite} onClick={open} onMouseEnter={open} onMouseLeave={close}>
+          <Question size={16} />
+        </QuestionWrapper>
+      </Tooltip>
+    </span>
+  );
+}
