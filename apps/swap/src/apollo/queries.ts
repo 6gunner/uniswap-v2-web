@@ -397,8 +397,8 @@ export const PAIR_DAY_DATA_BULK = (pairs, startTimestamp) => {
 };
 
 export const GLOBAL_CHART = gql`
-  query pandraDayDatas($startTime: Int!, $skip: Int!) {
-    pandraDayDatas(
+  query uniswapDayDatas($startTime: Int!, $skip: Int!) {
+    uniswapDayDatas(
       first: 1000
       skip: $skip
       where: { date_gt: $startTime }
@@ -416,9 +416,9 @@ export const GLOBAL_CHART = gql`
   }
 `;
 
-export const GLOBAL_DATA = (block) => {
-  const queryString = ` query pandraFactories {
-      pandraFactories(
+export const GLOBAL_DATA = (block?: number) => {
+  const queryString = ` query uniswapFactories {
+      uniswapFactories(
        ${block ? `block: { number: ${block}}` : ``} 
        where: { id: "${FACTORY_ADDRESS}" }) {
         id

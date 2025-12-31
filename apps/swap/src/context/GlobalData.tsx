@@ -266,32 +266,32 @@ async function getGlobalData(ethPrice: number | undefined, oldEthPrice: number |
       query: GLOBAL_DATA(),
       fetchPolicy: "cache-first",
     });
-    data = result.data.pandraFactories[0];
+    data = result.data.uniswapFactories[0];
 
     // fetch the historical data
     const oneDayResult = await client.query({
       query: GLOBAL_DATA(oneDayBlock?.number),
       fetchPolicy: "cache-first",
     });
-    oneDayData = oneDayResult.data.pandraFactories[0];
+    oneDayData = oneDayResult.data.uniswapFactories[0];
 
     const twoDayResult = await client.query({
       query: GLOBAL_DATA(twoDayBlock?.number),
       fetchPolicy: "cache-first",
     });
-    twoDayData = twoDayResult.data.pandraFactories[0];
+    twoDayData = twoDayResult.data.uniswapFactories[0];
 
     const oneWeekResult = await client.query({
       query: GLOBAL_DATA(oneWeekBlock?.number),
       fetchPolicy: "cache-first",
     });
-    const oneWeekData = oneWeekResult.data.pandraFactories[0];
+    const oneWeekData = oneWeekResult.data.uniswapFactories[0];
 
     const twoWeekResult = await client.query({
       query: GLOBAL_DATA(twoWeekBlock?.number),
       fetchPolicy: "cache-first",
     });
-    const twoWeekData = twoWeekResult.data.pandraFactories[0];
+    const twoWeekData = twoWeekResult.data.uniswapFactories[0];
 
     if (data && oneDayData && twoDayData && twoWeekData) {
       const [oneDayVolumeUSD, volumeChangeUSD] = get2DayPercentChange(

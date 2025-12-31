@@ -40,8 +40,6 @@ import {
   trustWalletConnection,
 } from "./connectors";
 import MobileSorry from "./components/MobileSorry";
-import FacutBtn from "./components/FacutBtn";
-import Socialize from "./components/Socialize";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -65,7 +63,7 @@ const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 164px;
+  padding-top: 136px;
   align-items: center;
   flex: 1;
   overflow-y: auto;
@@ -119,9 +117,7 @@ export default function App() {
                     <BrowserRouter>
                       <MobileSorry />
                       <AppWrapper>
-                        <HeaderWrapper>
-                          <Header />
-                        </HeaderWrapper>
+                        <Header />
                         <BodyWrapper>
                           <Popups />
                           <Switch>

@@ -13,7 +13,7 @@ import { NETWORK_CHAIN_ID } from "@src/connectors";
 import { useCallback } from "react";
 import { getAddChainParameters, NETWORK_LABELS } from "@src/utils/chain";
 import { HelpCircle } from "react-feather";
-import { SvgIcon } from "../SvgIcon";
+// import { SvgIcon } from "../SvgIcon";
 // import Logo from "@src/assets/svg/wordmark.png";
 // import LottieLogo from "../LottieLogo";
 // import HeaderLogo from "../HeaderLogo";

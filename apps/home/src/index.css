@@ -1,5 +1,0 @@
-/* 定义一个层 reset */
-@layer reset, antd;
-
-/* 导入 reset.css 并将其包含在 reset 层中 */
-@import url('reset.css') layer(reset);

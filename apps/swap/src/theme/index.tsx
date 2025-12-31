@@ -188,6 +188,7 @@ export const TYPE = {
 };
 
 export const FixedGlobalStyle = createGlobalStyle`
+
 html, input, textarea, button {
     font-family: Comfortaa;
   letter-spacing: -0.018em;
@@ -199,14 +200,24 @@ html, input, textarea, button {
   }
 }
 
+
 html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+#app {
+   height: 100%;
 }
 
 * {
   box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 button {
@@ -228,7 +239,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100%;
   // background-position: 0 -30vh;
   // background-repeat: no-repeat;
   // background: url(${bg});
