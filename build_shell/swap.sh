@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 if [ "$CF_PAGES_BRANCH" == "main" ]; then
   # Run the "production" script in `package.json` on the "production" branch
