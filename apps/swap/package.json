@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --clearScreen false",
     "build": "tsc && vite build",
-    "build:testing": "vite build --mode testing",
+    "build:production": "vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.ts\"",
     "test": "vitest"
